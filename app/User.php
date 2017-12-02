@@ -26,4 +26,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function directores()
+    {
+        return $this->belongsTo('App\Director','id_user');
+    }
+
+    public function comision_facultad()
+    {
+        return $this->belongsTo('App\ComisionFacultad','id_user');
+    }
+
+    public function comision_departamento()
+    {
+        return $this->belongsTo('App\ComisionDepartamento','id_user');
+    }
+
+    public function academicos()
+    {
+        return $this->belongsTo('App\Academico','id_user');
+    }
 }

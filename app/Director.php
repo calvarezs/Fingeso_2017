@@ -23,13 +23,20 @@ class Director extends Model
         'fecha_inicio_cargo',
         'fecha_termino_cargo',
         'id_user'
-    ];
-
-   // hasMany Academico
-   // hasmany convenio_desempeño
+    ]; 
 
     public function user()
     {
-        return $this->belongsTo('App\User','id_user');
+        return $this->hasOne('App\User','id_user');
     }
+
+    public function academicos()
+    {
+        return $this->hasMany('App\Academico', 'directores_id');
+    }  
+
+    public function convenio_desempeño()
+    {
+        return $this->hasMany('App\ConvenioDesempeño', 'director_id');
+    }  
 }

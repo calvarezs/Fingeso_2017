@@ -41,4 +41,9 @@ class Actividad extends Model
     {
         return $this->belongsTo('App\ConvenioDesempeño', 'convenio_desempeño_id');
     }
+
+    public function documento_respaldo()
+    {
+        return $this->hasMany('App\DocumentoRespaldo', 'actividades_id');
+    }
 }

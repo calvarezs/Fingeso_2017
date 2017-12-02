@@ -19,6 +19,10 @@ class CreateDocumentoRespaldosTable extends Migration
             $table->string('documento');
             $table->string('autor');
             $table->text('descripcion');
+
+            $table->integer('actividades_id')->unsigned();
+            $table->foreign('actividades_id')->references('id')->on('actividades'); 
+
             $table->timestamps();
         });
     }

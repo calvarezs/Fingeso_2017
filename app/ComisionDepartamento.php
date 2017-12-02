@@ -24,23 +24,25 @@ class ComisionDepartamento extends Model
         'director_departamento',
         'id_user'
     ];
+  
 
-    //hasmany acta preca
-    //hasmany informeactividades
-    //hasmany convenioDesempeño
-
-    public function comments()
+    public function user()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasOne('App\User','id_user');
+    }
+
+    public function acta_precalificacion()
+    {
+        return $this->hasMany('App\ActaPrecalificacion','comision_departamento');
     }
     
-    public function comments()
+    public function informe_actividades()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\InformeActividad','comision_departamento');
     }
 
-    public function comments()
+    public function convenio_desempeño()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\ConvenioDesempeño','comision_departamento');
     }
 }
