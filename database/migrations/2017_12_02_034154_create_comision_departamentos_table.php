@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateComisionDepartamentoTable extends Migration
+class CreateComisionDepartamentosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,13 @@ class CreateComisionDepartamentoTable extends Migration
     {
         Schema::create('comision_departamento', function (Blueprint $table) {
             $table->increments('id');
+            $table->String('nombre');
+            $table->String('correo');
+            $table->String('director_departamento');
+            
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
+
             $table->timestamps();
         });
     }
