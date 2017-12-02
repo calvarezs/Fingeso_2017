@@ -26,6 +26,11 @@ class Academico extends Model
         'id_user'
     ];
 
+    public function user()
+    {
+        return $this->hasOne('App\User','id_user');
+    }
+
     public function solicitud_apelaciones()
     {
         return $this->hasMany('App\SolicitudApelacion', 'academico_id');

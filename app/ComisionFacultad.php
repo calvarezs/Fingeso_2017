@@ -25,9 +25,26 @@ class ComisionFacultad extends Model
         'id_user'
     ];
 
+    public function user()
+    {
+        return $this->hasOne('App\User','id_user');
+    }
+
     public function acta_calificacion()
     {
         return $this->hasMany('App\ActaCalificacion', 'comision_facultad_id');
+    
+    }
+
+    public function acta_precalificacion()
+    {
+        return $this->hasMany('App\ActaPrecalificacion', 'comision_facultad_id');
+    
+    }
+
+    public function informe_actividades()
+    {
+        return $this->hasMany('App\InformeActividad', 'comision_facultad_id');
     
     }
 

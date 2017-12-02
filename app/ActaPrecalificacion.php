@@ -35,5 +35,10 @@ class ActaPrecalificacion extends Model
     public function comision_facultad()
     {
         return $this->belongsTo('App\ComisionFacultad', 'comision_facultad_id');
+    }
+    
+    public function comision_departamento()
+    {
+        return $this->belongsTo('App\ComisionDepartamento', 'comision_departamento_id');
     } 
 }
