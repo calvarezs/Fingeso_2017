@@ -26,6 +26,16 @@ class ConvenioController extends Controller
     }
 
     public function create(){
-        return view ('Covenio.Create');
+          
+            return view ('Convenio.Create');
+    }
+    public function ver(){
+            return view ('Convenio.convenio');
+    }
+    public function historial(){
+            return view ('Convenio.historial');
+    }
+    public function detalles(){
+            return view ('Convenio.detalles');
     }
 }

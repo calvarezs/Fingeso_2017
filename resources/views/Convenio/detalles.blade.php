@@ -108,7 +108,7 @@
 <div class="container">
     <h3 class="text-center"> COMENTARIOS </h3>
 <div clas="text-center">
-<a href="{{route('Convenio')}}"  class="btn btn-primary"> Agregar comentario</a>
+
 </div>
       <br>
       <div class="form-group"> 
@@ -130,8 +130,6 @@
       </div>    
 </div>
 <hr />
-
-
 
 
 </body>

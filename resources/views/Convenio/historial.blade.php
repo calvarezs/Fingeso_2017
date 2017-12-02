@@ -3,7 +3,10 @@
 @section('content')
 
 <div class ="container">
-<div class="collapse navbar-collapse" id="app-navbar-collapse" style="background-color: #f08b24;">
+
+
+
+	<div class="collapse navbar-collapse" id="app-navbar-collapse" style="background-color: #f08b24;">
      <div class="navbar-header">
             <a class="navbar-brand" href="#">Logotipo</a>
      </div>
@@ -18,21 +21,37 @@
                         <li><a href="{{ route('Evaluaciones') }}">Evaluaciones</a></li>               
                     </ul>
                 </div>
- <br>
-  <div class="jumbotron" align="center"  >
-    <h1>CONVENIO ACTUAL</h1> 
-    <p>  <a href="{{ route('VerConvenio') }}" class="btn btn-primary"> VER </a> </p> 
-     <p> o que aparezca crear si no existe </p>
+	   <div>
+  			<h1 class="text-center"> Lista de Convenios</h1>
+			
+  		</div>
+  		<hr />
+  		<div >
 
-     <p>  <a href="{{ route('CreateConvenio') }}"  class="btn btn-primary"> CREAR</a> </p> 
-  </div>
-               
- <br>
-  <div class="jumbotron " align="center">
-    <h1>HISTORIAL DE CONVENIOS</h1> 
+</div>
+<br>
+ <div>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<th> N°</th>
+				<th> Fecha </th>
+			
+				<td> Acciones </th>
+			</thead>
 
-    <p>  <a href="{{ route('historialConvenio') }}"  class="btn btn-primary"> VER</a> </p> 
-  </div>
-</div>      
+			<tbody>
+			<tr> 
 
-@endsection
+			
+			<td> 1 </td>
+			<td> 19/10/17</td>
+			<td>  <a href="{{route('DetallesConvenio')}}"  class="btn btn-primary"> Detalles</a> </td>
+			</tr>
+			
+			</tbody>
+
+		</table>
+</div>
+</div>
+</div>
+		@endsection

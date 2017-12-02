@@ -21,6 +21,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/Convenio', 'ConvenioController@index')->name('Convenio');
 
+
+Route::get('/CrearConvenio', 'ConvenioController@create')->name('CreateConvenio');
+
+Route::get('/VerConvenio','ConvenioController@ver')->name('VerConvenio');
+
+Route::get('/HistorialConvenio','ConvenioController@historial')->name('historialConvenio');
+
+Route::get('/DetallesConvenio','ConvenioController@detalles')->name('DetallesConvenio');
+
 Route::get('/Actividades','ActividadController@index')->name('Actividades');
 
 Route::get('/CrearActividades','ActividadController@Registrar')->name('CreateActividad');
