@@ -8,14 +8,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Repositorio Academico</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" style="background-color: #f08b24;">
             <div class="container">
                 <div class="navbar-header">
 
@@ -29,13 +29,13 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        Repositorio Academico
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
+                    <!-- Left Side Of Navbar --> 
+                    <ul class="nav navbar-nav" style="background-color: #ffff;">
                         &nbsp;
                     </ul>
 
@@ -46,6 +46,19 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
+
+                        @if(Auth::user()->tipo == 1)
+                            <li><a href="{{ route('Convenio2')}}">Convenios</a></li>
+                        @elseif(Auth::user()->tipo == 2)
+                            <li><a href="{{ route('DepartamentoEvaluaciones')}}">Evaluaciones</a></li>
+                        @elseif(Auth::user()->tipo == 3)
+                            <li><a href="{{ route('Convenio2')}}">Convenios</a></li>
+                        @elseif(Auth::user()->tipo == 4)
+                            <li><a href="{{ route('Actividades') }}">Actividades</a></li>
+                            <li><a href="{{ route('Convenio') }}">Convenios</a></li>
+                            <li><a href="{{ route('Evaluaciones') }}">Evaluaciones</a></li> 
+                        @endif
+
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>

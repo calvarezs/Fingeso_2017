@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #b2ffff;
+                background-color: ##f08b24;
                 color: #ff8000;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -69,9 +69,17 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ route('Actividades') }}">Actividades</a>
-                        <a href="{{ route('Convenio') }}">Convenios</a>
-                        <a href="{{ route('Evaluaciones') }}">Evaluaciones</a> 
+                        @if(Auth::user()->tipo == 1)
+                            <a href="{{ route('Convenio2')}}">Convenios</a>
+                        @elseif(Auth::user()->tipo == 2)
+                            <a href="{{ route('DepartamentoEvaluaciones')}}">Evaluaciones</a>
+                        @elseif(Auth::user()->tipo == 3)
+                            <a href="{{ route('Convenio2')}}">Convenios</a>
+                        @elseif(Auth::user()->tipo == 4)
+                            <a href="{{ route('Actividades') }}">Actividades</a>
+                            <a href="{{ route('Convenio') }}">Convenios</a>
+                            <a href="{{ route('Evaluaciones') }}">Evaluaciones</a> 
+                        @endif
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
