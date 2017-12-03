@@ -44,9 +44,15 @@
 			<tr> 
 			@foreach ($convenios as $convenio)
             <tr>
-                <td>{{$convenios->id}} </td> 
-                <td>{{$convenios->fecha_creacion}}</td> 
-				<td>  <a href="{{route('DetallesConvenio/')}}"  class="btn btn-primary"> Detalles</a> </td>
+                <td>{{$convenio->id}} </td> 
+                <td>{{$convenio->fecha_creacion}}</td> 
+				         <td width="15%"> 
+                      <form class="form-horizontal" method="POST" action="{{ route('DetallesConvenio') }}">
+                                    {{ csrf_field() }}
+                                     <input type="hidden" name="idConvenio" value="{{$convenio->id}}">
+                                     <button type="submit" class="btn btn-primary">Ver mas</button> </form>
+                                    </td>   
+                  </td>
             </tr>
             @endforeach
 			</tbody>

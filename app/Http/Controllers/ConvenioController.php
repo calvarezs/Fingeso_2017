@@ -46,7 +46,6 @@ class ConvenioController extends Controller
         $convenio->status = 'Rechazada'; 
         $convenio->director_id = 1;
         $convenio->comision_departamentos_id = 1;
-        
         $convenio->save(); 
         return redirect()->route('historialConvenio');
     }
@@ -65,6 +64,7 @@ class ConvenioController extends Controller
     }
 
     public function historial(){
+
         $convenios=ConvenioDesempeno::All(); 
         return view ('Convenio.Profesor.historial',compact('convenios'));
     }
@@ -72,7 +72,8 @@ class ConvenioController extends Controller
     public function historial2(){
             return view ('Convenio.Director.Historial');
     }
-    public function detalles(){
-            return view ('Convenio.Profesor.detalles');
+    public function detalles(Request $i){
+         return $i;
+           //return view ('Convenio.Profesor.detalles');
     }
 }
