@@ -11,7 +11,7 @@ class DocumentoRespaldo extends Model
      *
      * @var string
      */
-    protected $table = 'my_flights';
+    protected $table = 'documento_respaldo';
     
      /**
      * The attributes that are mass assignable.
@@ -19,6 +19,10 @@ class DocumentoRespaldo extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'fecha_creacion',
+        'documento',
+        'autor',
+        'descripcion',
+        'actividades_id'
     ];
 }

@@ -5,7 +5,7 @@
 <div class ="container">
 <div class="collapse navbar-collapse" id="app-navbar-collapse" style="background-color: #f08b24;">
      <div class="navbar-header">
-            <a class="navbar-brand" href="#">Logotipo</a>
+            <a class="navbar-brand" href="#">Repositorio Academico</a>
      </div>
     
                 <ul class="nav navbar-nav" style="background-color: #ffff;">
@@ -36,14 +36,14 @@
 
         </div>
         <div class="col-md-12">
-          <label for=" ctividad">Detalles de la actividad </label>
-          <textarea class="form-control" id ="activida" placeholder="Escribir actividad" rows="10"></textarea>
+          <label for="detalles">Detalles de la actividad </label>
+          <textarea class="form-control" id ="detalles" placeholder="Escribir actividad" rows="10"></textarea>
         </div>
       </div>
       <div class="form-group">
         <div class="row">
           <div class="col-md-6 ">
-            <label for="tipo">Tipo de actividad</label>
+            <label for="">Tipo de actividad</label>
             <select class="form-control" name="" id="tipo">
             <option value="">Investigación</option>
             <option value="">Vinculación con el medio</option>
@@ -59,12 +59,12 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-6 ">
-            <label for="hora">Fecha </label>
-            <input class="form-control" id="date" type="date">
+            <label for="Fecha"> Fecha </label>
+            <input class="form-control" id="Fecha" type="date">
           </div>
           <div class="col-md-6">
-            <label for="Fecha"> Hora </label>
-            <input class= "form-control" type="time">
+            <label for="hora"> Hora </label>
+            <input class= "form-control" id="hora" type="time">
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@
             <div class="row">
               <div class="col-md-6 ">
                 <label for="documento_fecha">Fecha creación</label>
-                  <input class="form-control" id="date" type="date">
+                  <input class="form-control" id="documento_fecha" type="date">
               </div>
               <div class="col-md-6">
                 <label>Autor</label>
@@ -103,11 +103,11 @@
             <div class="row">
               <div class="col-md-6 ">
                 <label for="documento_fecha">Fecha creación</label>
-                  <input class="form-control" id="date" type="date">
+                  <input class="form-control" id="documento_fecha" type="date">
               </div>
               <div class="col-md-6">
                 <label>Autor</label>
-                <input class ="form-control" type="text" name="fname"><br>
+                <input class ="form-control" type="text" name="vname"><br>
               </div>
             </div>
 
@@ -121,7 +121,7 @@
   </select>
 </div>
     <div class="col-md- 12 center-block">
-      <a href="{{route('HistorialActividad')}}"  class="btn btn-primary"> INGRESAR</a>
+      <a href="{{route('CrearNuevaActividad')}}"  class="btn btn-primary"> INGRESAR</a>
     </div>
     <br></br>
   </div>   

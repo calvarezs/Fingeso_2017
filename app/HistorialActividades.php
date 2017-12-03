@@ -19,6 +19,7 @@ class HistorialActividades extends Model
      * @var array
      */
     protected $fillable = [
+        'id_usuario',
         'titulo',
         'detalles_actividad',
         'tipo_actividad',

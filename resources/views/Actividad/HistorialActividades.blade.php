@@ -44,35 +44,17 @@
 
 			<tbody>
 			<tr> 
-
-			<td> Investigación sobre tema X</td>
-			<td> Investigación</td>
-			<td> 19/10/17</td>
-			<td> 15:00</td>
-			<td> Universidad de santiago</td>
-			<td> Publico </td>
-			<td> <button class="btn btn-success btn-xs">Editar</button> </td>
-			</tr>
-			<tr>      
-			<td> Investigación sobre tema Y</td>
-			<td> Investigación</td>
-			<td> 20/10/17</td>
-			<td> 16:00</td>
-			<td> Universidad de santiago</td>
-			<td> Privado </td>
-			<td> <button class="btn btn-success btn-xs">Editar</button> </td>
-			</tr>
-				</tr>
-			<tr>      
-			<td> Exposición en colegio</td>
-			<td> Vinculación con el medio</td>
-			<td> 21/10/17</td>
-			<td> 17:00</td>
-			<td> Colegio Santa cruz</td>
-			<td> Privado </td>
-			<td> <button class="btn btn-success btn-xs">Editar</button> </td>
-			</tr>
-
+			@foreach ($actividades as $actividad)
+            <tr>
+                <td>{{$actividad->titulo}} </td>
+                <td>{{$actividad->tipo_actividad}}</td>
+                <td>{{$actividad->fecha}}</td>
+                <td>{{$actividad->Hora}}</td>
+                <td>{{$actividad->ubicacion}}</td>
+				<td>{{$actividad->privacidad}}</td>
+                <td> <button class="btn btn-success btn-xs">Editar</button> </td>
+            </tr>
+            @endforeach
 			</tbody>
 
 		</table>

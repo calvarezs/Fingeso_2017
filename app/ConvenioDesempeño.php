@@ -58,4 +58,10 @@ class ConvenioDesempeño extends Model
         'director_id',
         'comision_departamentos_id'
     ];
+
+    public function directors()
+    {
+        return $this->belongsTo('App\Director', 'director_id');
+    } 
+    
 }
