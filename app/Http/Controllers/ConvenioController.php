@@ -22,20 +22,39 @@ class ConvenioController extends Controller
 
     public function index()
     {
-        return view('Convenio.HomeConvenio');
+        return view('Convenio.Profesor.HomeConvenio');
+    }
+
+    public function index2(){
+        return view('Convenio.Director.HomeConvenio');
     }
 
     public function create(){
           
-            return view ('Convenio.Create');
+            return view ('Convenio.Profesor.Create');
     }
+
+    public function revisar(){
+            return view ('Convenio.Director.Revisar');
+    }
+
+
     public function ver(){
-            return view ('Convenio.convenio');
+            return view ('Convenio.Profesor.convenio');
     }
+    
+    public function validar(){
+        return view ('Convenio.Director.Validar');          
+    }
+
     public function historial(){
-            return view ('Convenio.historial');
+            return view ('Convenio.Profesor.historial');
+    }
+
+    public function historial2(){
+            return view ('Convenio.Director.Historial');
     }
     public function detalles(){
-            return view ('Convenio.detalles');
+            return view ('Convenio.Profesor.detalles');
     }
 }

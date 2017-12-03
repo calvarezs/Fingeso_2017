@@ -15,19 +15,23 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="{{ route('Actividades') }}">Actividades</a></li>
                         <li><a href="{{ route('Convenio') }}">Convenios</a></li>
-                        <li><a href="{{ route('Evaluaciones') }}">Evaluaciones</a></li>           
+                        <li><a href="{{ route('Evaluaciones') }}">Evaluaciones</a></li>               
                     </ul>
                 </div>
  <br>
   <div class="jumbotron" align="center"  >
-    <h1>EVALUACIONES</h1> 
-    <p>  <a href="{{route('HEvaluaciones')}}" class="btn btn-primary"> INGRESAR</a> </p> 
+    <h1>CONVENIO ACTUAL</h1> 
+    <p>  <a href="{{ route('VerConvenio') }}" class="btn btn-primary"> VER </a> </p> 
+     <p> o que aparezca crear si no existe </p>
+
+     <p>  <a href="{{ route('CreateConvenio') }}"  class="btn btn-primary"> CREAR</a> </p> 
   </div>
                
  <br>
   <div class="jumbotron " align="center">
-    <h1>APELACIONES</h1> 
-    <p><a href="{{route('Apelaciones')}}" class="btn btn-primary"> INGRESAR</a> </p> 
+    <h1>HISTORIAL DE CONVENIOS</h1> 
+
+    <p>  <a href="{{ route('historialConvenio') }}"  class="btn btn-primary"> VER</a> </p> 
   </div>
 </div>      
 
