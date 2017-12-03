@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ConvenioDesempeno;
+use Carbon\Carbon;
 class ConvenioController extends Controller
 {
     /**
@@ -39,9 +40,10 @@ class ConvenioController extends Controller
     public function new_convenio(Request $data)
     {
         $convenio = new ConvenioDesempeno();
-
+        $convenio->fecha_creacion = Carbon::now()->toDateString();
         $convenio->detalle_sem_1 = $data->detalles1;
-        $convenio->detalle_sem_2 = $data->detalles2; 
+        $convenio->detalle_sem_2 = $data->detalles2;
+        $convenio->status = 'Rechazada'; 
         $convenio->director_id = 1;
         $convenio->comision_departamentos_id = 1;
         
@@ -63,7 +65,8 @@ class ConvenioController extends Controller
     }
 
     public function historial(){
-            return view ('Convenio.Profesor.historial');
+        $convenios=ConvenioDesempeno::All(); 
+        return view ('Convenio.Profesor.historial',compact('convenios'));
     }
 
     public function historial2(){

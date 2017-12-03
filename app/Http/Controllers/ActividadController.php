@@ -29,16 +29,10 @@ class ActividadController extends Controller
         return view ('Actividad.RegistrarActividad');
 
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 301785bc95e35cd76683363933ab4959fd596479
-    public function new_actividades(Request $data){
-            
-          
-              $actividad = new HistorialActividades();
+    public function new_actividades(Request $data){  
+        $actividad = new HistorialActividades();
         
-            $actividad->id_usuario = 1;
+        $actividad->id_usuario = 1;
         $actividad->titulo = $data->titulo;
         $actividad->detalles_actividad = $data->detalles;
         $actividad->tipo_actividad = $data->Tipo;
@@ -46,7 +40,8 @@ class ActividadController extends Controller
         $actividad->fecha = $data->Fecha;
         $actividad->Hora = $data->hora; 
         $actividad->privacidad = $data->privacidad;
-          $actividad->save();
+        
+        $actividad->save();
         return redirect()->route('HistorialActividad');
     }
     public function RegistrarNuevaActividad(request $data)

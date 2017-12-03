@@ -16,6 +16,7 @@ class CreateConvenioDesempenosTable extends Migration
         Schema::create('convenio_desempeno', function (Blueprint $table) {
             $table->increments('id'); 
             $table->dateTime('fecha_creacion')->nullable();
+            $table->string('status')->nullable();
             $table->date('periodo')->nullable();
             $table->string('version')->nullable();
             $table->text('informacion')->nullable();

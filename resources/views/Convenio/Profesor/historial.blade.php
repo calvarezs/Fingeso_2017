@@ -41,13 +41,16 @@
 
 			<tbody>
 			<tr> 
-
-			
-			<td> 1 </td>
-			<td> 19/10/17</td>
-			<td>  <a href="{{route('DetallesConvenio')}}"  class="btn btn-primary"> Detalles</a> </td>
-			</tr>
-			
+			@foreach ($convenios as $convenio)
+            <tr>
+                <td>{{$actividad->titulo}} </td>
+                <td>{{$actividad->tipo_actividad}}</td>
+                <td>{{$actividad->fecha}}</td>
+                <td>{{$actividad->Hora}}</td>
+                <td>{{$actividad->ubicacion}}</td>
+				<td>{{$actividad->privacidad}}</td>
+            </tr>
+            @endforeach
 			</tbody>
 
 		</table>

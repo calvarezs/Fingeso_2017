@@ -45,8 +45,8 @@
  <div class="container">
     <h3 class="text-center"> SEMESTRE 2 </h3>
       <div>
-            <label for="detalles">Detalles del convenio </label>
-          <textarea class="form-control" name="detalles2" id ="detalles" placeholder="Escribir actividad" rows="10"></textarea>
+            <label for="detalles2">Detalles del convenio </label>
+          <textarea class="form-control" name="detalles2" id ="detalles2" placeholder="Escribir actividad" rows="10"></textarea>
         </div> 
           
     </div>

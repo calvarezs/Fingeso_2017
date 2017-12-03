@@ -23,6 +23,7 @@ class ConvenioDesempeno extends Model
         'periodo',
         'version',
         'informacion',
+        'status',
         'detalle_sem_1',
         'detalle_sem_2',
         'curso_a_impartir_1',
