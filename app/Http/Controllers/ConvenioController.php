@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\ConvenioDesempeno;
 class ConvenioController extends Controller
 {
     /**
@@ -31,13 +32,23 @@ class ConvenioController extends Controller
 
     public function create(){
           
-            return view ('Convenio.Profesor.Create');
+        return view ('Convenio.Profesor.Create');
     }
 
 
-    public function new_convenio(Request $i){
-            return $i;  
+    public function new_convenio(Request $data)
+    {
+        $convenio = new ConvenioDesempeno();
+
+        $convenio->detalle_sem_1 = $data->detalles1;
+        $convenio->detalle_sem_2 = $data->detalles2; 
+        $convenio->director_id = 1;
+        $convenio->comision_departamentos_id = 1;
+        
+        $convenio->save(); 
+        return redirect()->route('historialConvenio');
     }
+
     public function revisar(){
             return view ('Convenio.Director.Revisar');
     }

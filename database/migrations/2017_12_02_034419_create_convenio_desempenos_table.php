@@ -15,10 +15,12 @@ class CreateConvenioDesempenosTable extends Migration
     {
         Schema::create('convenio_desempeno', function (Blueprint $table) {
             $table->increments('id'); 
-            $table->dateTime('fecha_creacion');
-            $table->date('periodo');
-            $table->string('version');
-            $table->text('informacion');
+            $table->dateTime('fecha_creacion')->nullable();
+            $table->date('periodo')->nullable();
+            $table->string('version')->nullable();
+            $table->text('informacion')->nullable();
+            $table->text('detalle_sem_1')->nullable();
+            $table->text('detalle_sem_2')->nullable();
             $table->text('curso_a_impartir_1')->nullable();
             $table->integer('horas_curso_1')->nullable();
             $table->text('curso_a_impartir_2')->nullable();
@@ -53,10 +55,10 @@ class CreateConvenioDesempenosTable extends Migration
             $table->integer('horas_cargo_8')->nullable();
 
             $table->integer('director_id')->unsigned();
-            $table->foreign('director_id')->references('id')->on('directores');
+            //$table->foreign('director_id')->references('id')->on('directores');
 
             $table->integer('comision_departamentos_id')->unsigned();
-            $table->foreign('comision_departamentos_id')->references('id')->on('comision_departamento');
+            //$table->foreign('comision_departamentos_id')->references('id')->on('comision_departamento');
 
             $table->timestamps();
         });
