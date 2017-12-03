@@ -22,8 +22,8 @@ class CreateActividadsTable extends Migration
             $table->integer('academico_id')->unsigned();
             $table->foreign('academico_id')->references('id')->on('academicos'); 
 
-            $table->integer('convenio_desempeño_id')->unsigned();
-            $table->foreign('convenio_desempeño_id')->references('id')->on('convenio_desempeño'); 
+            $table->integer('convenio_desempeno_id')->unsigned();
+            $table->foreign('convenio_desempeno_id')->references('id')->on('convenio_desempeno'); 
 
             $table->timestamps();
         });

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateConvenioDesempeñosTable extends Migration
+class CreateConvenioDesempenosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateConvenioDesempeñosTable extends Migration
      */
     public function up()
     {
-        Schema::create('convenio_desempeño', function (Blueprint $table) {
+        Schema::create('convenio_desempeno', function (Blueprint $table) {
             $table->increments('id'); 
             $table->dateTime('fecha_creacion');
             $table->date('periodo');

@@ -24,7 +24,7 @@ class Actividad extends Model
         'descripcion',
         'academico_id',
         'informe_actividades_id',
-        'convenio_desempeño_id'
+        'convenio_desempeno_id'
     ];
 
     public function academicos()
@@ -37,9 +37,9 @@ class Actividad extends Model
         return $this->belongsTo('App\InformeActividad', 'informe_actividades_id');
     }
 
-    public function convenio_desempeño()
+    public function convenio_desempeno()
     {
-        return $this->belongsTo('App\ConvenioDesempeño', 'convenio_desempeño_id');
+        return $this->belongsTo('App\ConvenioDesempeno', 'convenio_desempeno_id');
     }
 
     public function documento_respaldo()

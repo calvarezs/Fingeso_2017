@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ConvenioDesempeño extends Model
+class ConvenioDesempeno extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'convenio_desempeño';
+    protected $table = 'convenio_desempeno';
     
      /**
      * The attributes that are mass assignable.
