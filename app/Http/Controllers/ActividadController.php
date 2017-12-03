@@ -1,7 +1,9 @@
 <?php
+
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\HistorialActividades;
+
 class ActividadController extends Controller
 {
     /**
@@ -12,26 +14,32 @@ class ActividadController extends Controller
     public function __construct()
     {
     }
+
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function Index(){ 
         return view ('Actividad.HomeActividades');
     }
+
     public function Historial()
     {
         $actividades=HistorialActividades::All(); 
         return view('Actividad.HistorialActividades',compact('actividades'));
     }
+
     public function Registrar(){
         return view ('Actividad.RegistrarActividad');
 
     }
-    public function new_actividades(Request $data){  
+
+    public function new_actividades(Request $data){
+        $d;   
+          
         $actividad = new HistorialActividades();
-        
         $actividad->id_usuario = 1;
         $actividad->titulo = $data->titulo;
         $actividad->detalles_actividad = $data->detalles;
@@ -40,10 +48,10 @@ class ActividadController extends Controller
         $actividad->fecha = $data->Fecha;
         $actividad->Hora = $data->hora; 
         $actividad->privacidad = $data->privacidad;
-        
-        $actividad->save();
+          $actividad->save();
         return redirect()->route('HistorialActividad');
     }
+
     public function RegistrarNuevaActividad(request $data)
     {
         $actividad = new HistorialActividades();
