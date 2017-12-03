@@ -35,18 +35,15 @@
 			<thead>
 				<th> N°</th>
 				<th> Fecha </th>
-			
 				<td> Acciones </th>
 			</thead>
-
-
 			<tbody>
 			<tr> 
 			@foreach ($convenios as $convenio)
             <tr>
-                <td>{{$convenios->id}} </td> 
-                <td>{{$convenios->fecha_creacion}}</td> 
-				<td>  <a href="{{route('DetallesConvenio/')}}"  class="btn btn-primary"> Detalles</a> </td>
+                <td>{{$convenio->id}} </td> 
+                <td>{{$convenio->fecha_creacion}}</td> 
+				<td>  <a href="{{route('DetallesConvenio/?', $convenio->id)}}"  class="btn btn-primary"> Detalles</a> </td>
             </tr>
             @endforeach
 			</tbody>

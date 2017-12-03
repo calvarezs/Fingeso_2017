@@ -56,8 +56,11 @@ class ConvenioController extends Controller
     }
 
 
-    public function ver(){
-            return view ('Convenio.Profesor.convenio');
+    public function ver()
+    {
+        $convenio=ConvenioDesempeno::orderBy('fecha_creacion', 'desc')
+        ->first(); 
+        return view ('Convenio.Profesor.convenio',compact('convenio'));
     }
     
     public function validar(){
