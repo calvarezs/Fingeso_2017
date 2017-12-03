@@ -39,7 +39,7 @@ Route::get('/RevisarConvenio','ConvenioController@revisar')->name('RevisarConven
 Route::get('/HistorialConvenio','ConvenioController@historial')->name('historialConvenio');
 
 Route::get('/HistorialConvenioDirector','ConvenioController@historial2')->name('DhistorialConvenio');
-Route::get('/DetallesConvenio','ConvenioController@detalles')->name('DetallesConvenio');
+Route::post('/DetallesConvenio','ConvenioController@detalles')->name('DetallesConvenio');
 
 Route::get('/Actividades','ActividadController@index')->name('Actividades');
 
