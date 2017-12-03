@@ -19,8 +19,7 @@ class Academico extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre', 
-        'rut',
+        'nombre',  
         'correo',
         'directores_id',
         'id_user'

@@ -15,8 +15,7 @@ class CreateAcademicosTable extends Migration
     {
         Schema::create('academicos', function (Blueprint $table) {
             $table->increments('id');
-            $table->String('nombre'); 
-            $table->String('rut'); 
+            $table->String('nombre');  
             $table->String('correo');
 
             $table->integer('directores_id')->unsigned();
