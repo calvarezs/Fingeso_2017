@@ -31,86 +31,32 @@
  
   </div>
 <body>
-  
+
+   <hr />  
 
 <div class="container">
+ <h2> Status: </h2> <h1> Rechazada</h1>   
+
+
+
+</div> 
    <hr />
-   <h2> Status: </h2> <h1> Rechazada</h1>   
-    <hr />
+<div class="container">
+
     <h3 class="text-center"> SEMESTRE 1 </h3> 
-      <br>
-      <div class="form-group"> 
-                  <table class="table table-bordered table-striped">
-                      <thead>
-                        <th> N° </th>
-                        <th> Curso</th>
-                        <th> Horas a dedicar</th>
-                      </thead>
-                      <tbody> 
-                      <td> 1 </td>
-                      <td> Investigación</td>
-                      <td> 100 </td>
-                  </tbody>
-                  </table>
-      </div> 
-      <br>
-      <div class="form-group"> 
-          <table class="table table-bordered table-striped">
-                      <thead>
-                        <th> N° </th>
-                        <th> Actividad administrativa </th>
-                        <th> Horas a dedicar</th>
-                        
-                      </thead>
-                      <tbody> 
-                      <td> 1 </td>
-                      <td> Cargo 1</td>
-                      <td> 100 </td>
-                  </tbody>
-                  </table>
-      </div>   
+      <br> 
 </div> 
 
 <hr />
 <div class="container">
-    <h3 class="text-center"> SEMESTRE 2 </h3>
+   <hr />
+    <h3 class="text-center"> SEMESTRE 2 </h3> 
+      <br> 
+</div> 
 
-      <br>
-      <div class="form-group"> 
-                  <table class="table table-bordered table-striped">
-                      <thead>
-                        <th> N° </th>
-                        <th> Curso</th>
-                        <th> Horas a dedicar</th>
-                      
-                      </thead>
-                      <tbody> 
-                      <td> 1 </td>
-                      <td> Investigación</td>
-                      <td> 100 </td>
-        
-                  </tbody>
-                  </table>
-      </div> 
+<hr />
 
-      <br>
-      <div class="form-group"> 
-          <table class="table table-bordered table-striped">
-                      <thead>
-                        <th> N° </th>
-                        <th> Actividad administrativa </th>
-                        <th> Horas a dedicar</th>
-                  
-                      </thead>
-                      <tbody> 
-                      <td> 1 </td>
-                      <td> Cargo 1</td>
-                      <td> 100 </td>
-                      
-                  </tbody>
-                  </table>
-      </div>   
-</div>
+
 
 <hr />
 <div class="container">
@@ -129,10 +75,10 @@
                       
                       </thead>
                       <tbody> 
-                      <td> 1 </td>
-                      <td> 12/13/18</td>
-                      <td> Director Juan carlos </td>
-                      <td> COMENTARIOS </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
                   </tbody>
                   </table>
       </div>    

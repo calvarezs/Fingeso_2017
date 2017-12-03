@@ -33,7 +33,7 @@
     <div class="container">
     <h3 class="text-center"> SEMESTRE 1 </h3>
       <div>
-            <label for="detalles">Detalle del convenio</label>
+          <label for="detalles">Detalle del convenio</label>
           <textarea class="form-control" name="detalles1" id ="detalles" placeholder="Escribir actividad" rows="10"></textarea>
         </div> 
           
