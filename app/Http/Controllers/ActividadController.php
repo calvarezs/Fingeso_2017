@@ -27,7 +27,12 @@ class ActividadController extends Controller
     }
     public function Registrar(){
         return view ('Actividad.RegistrarActividad');
+
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 301785bc95e35cd76683363933ab4959fd596479
     public function new_actividades(Request $data){
             
           

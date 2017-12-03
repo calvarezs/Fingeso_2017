@@ -36,7 +36,7 @@
           <label for="detalles">Detalle del convenio</label>
           <textarea class="form-control" name="detalles1" id ="detalles" placeholder="Escribir actividad" rows="10"></textarea>
         </div> 
-          
+
     </div> 
  
 
