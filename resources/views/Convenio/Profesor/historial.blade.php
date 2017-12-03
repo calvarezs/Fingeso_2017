@@ -39,20 +39,17 @@
 				<td> Acciones </th>
 			</thead>
 
+
 			<tbody>
 			<tr> 
 			@foreach ($convenios as $convenio)
             <tr>
-                <td>{{$actividad->titulo}} </td>
-                <td>{{$actividad->tipo_actividad}}</td>
-                <td>{{$actividad->fecha}}</td>
-                <td>{{$actividad->Hora}}</td>
-                <td>{{$actividad->ubicacion}}</td>
-				<td>{{$actividad->privacidad}}</td>
+                <td>{{$convenios->id}} </td> 
+                <td>{{$convenios->fecha_creacion}}</td> 
+				<td>  <a href="{{route('DetallesConvenio/')}}"  class="btn btn-primary"> Detalles</a> </td>
             </tr>
             @endforeach
 			</tbody>
-
 		</table>
 </div>
 </div>
