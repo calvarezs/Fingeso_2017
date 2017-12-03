@@ -26,138 +26,35 @@
 </header>
 
 <body>
-  
+  <form class="form-horizontal" method="POST" action="{{ route('newConvenio') }}">
+        {{ csrf_field() }}
 
-<div class="container">
+
+    <div class="container">
     <h3 class="text-center"> SEMESTRE 1 </h3>
       <div>
-          <label> Curso a impartir </label>
-          <select class="form-control" id="sel1">
-            <option>Curso 1</option>
-            <option>Curso 2</option>
-          </select>
-          <br>
-          <label for="Horas"> Horas a dedicar</label>
-          <input class="form-control" id="Horas" type="number">
-          <br>
-          <a href="#"  class="btn btn-primary"> Agregar</a>    
-      </div> 
-      <br>
-      <div class="form-group"> 
-                  <table class="table table-bordered table-striped">
-                      <thead>
-                        <th> N° </th>
-                        <th> Curso</th>
-                        <th> Horas a dedicar</th>
-                        <th> Acción</th>
-                      </thead>
-                      <tbody> 
-                      <td> 1 </td>
-                      <td> Investigación</td>
-                      <td> 100 </td>
-                      <td> Eliminar</td>
-                  </tbody>
-                  </table>
-      </div> 
-
-      <div>  
-          <label> Actividad administrativas </label>
-          <select class="form-control" id="sel1">
-          <option> Cargo 1</option>
-          <option> Cargo 2</option>
-          </select>
-          <br>
-          <label for="Horas"> Horas a dedicar</label>
-          <input class="form-control" id="Horas" type="number">
-          <br>
-          <a href="#"  class="btn btn-primary"> Agregar</a>    
-      </div> 
-      <br>
-      <div class="form-group"> 
-          <table class="table table-bordered table-striped">
-                      <thead>
-                        <th> N° </th>
-                        <th> Actividad administrativa </th>
-                        <th> Horas a dedicar</th>
-                        <th> Acción</th>
-                      </thead>
-                      <tbody> 
-                      <td> 1 </td>
-                      <td> Cargo 1</td>
-                      <td> 100 </td>
-                      <td> Eliminar</td>
-                  </tbody>
-                  </table>
-      </div>   
-</div> 
+            <label for="detalles">Detalle del convenio</label>
+          <textarea class="form-control" name="detalles1" id ="detalles" placeholder="Escribir actividad" rows="10"></textarea>
+        </div> 
+          
+    </div> 
+ 
 
 <hr />
-<div class="container">
+
+ <div class="container">
     <h3 class="text-center"> SEMESTRE 2 </h3>
       <div>
-          <label> Curso a impartir </label>
-          <select class="form-control" id="sel1">
-            <option>Curso 1</option>
-            <option>Curso 2</option>
-          </select>
-          <br>
-          <label for="Horas"> Horas a dedicar</label>
-          <input class="form-control" id="Horas" type="number">
-          <br>
-          <a href="#"  class="btn btn-primary"> Agregar</a>    
-      </div> 
-      <br>
-      <div class="form-group"> 
-                  <table class="table table-bordered table-striped">
-                      <thead>
-                        <th> N° </th>
-                        <th> Curso</th>
-                        <th> Horas a dedicar</th>
-                        <th> Acción</th>
-                      </thead>
-                      <tbody> 
-                      <td> 1 </td>
-                      <td> Investigación</td>
-                      <td> 100 </td>
-                      <td> Eliminar</td>
-                  </tbody>
-                  </table>
-      </div> 
-
-      <div>  
-          <label> Actividad administrativas </label>
-          <select class="form-control" id="sel1">
-          <option> Cargo 1</option>
-          <option> Cargo 2</option>
-          </select>
-          <br>
-          <label for="Horas"> Horas a dedicar</label>
-          <input class="form-control" id="Horas" type="number">
-          <br>
-          <a href="#"  class="btn btn-primary"> Agregar</a>    
-      </div> 
-      <br>
-      <div class="form-group"> 
-          <table class="table table-bordered table-striped">
-                      <thead>
-                        <th> N° </th>
-                        <th> Actividad administrativa </th>
-                        <th> Horas a dedicar</th>
-                        <th> Acción</th>
-                      </thead>
-                      <tbody> 
-                      <td> 1 </td>
-                      <td> Cargo 1</td>
-                      <td> 100 </td>
-                      <td> Eliminar</td>
-                  </tbody>
-                  </table>
-      </div>   
-</div>
+            <label for="detalles">Detalles del convenio </label>
+          <textarea class="form-control" name="detalles2" id ="detalles" placeholder="Escribir actividad" rows="10"></textarea>
+        </div> 
+          
+    </div>
 <hr />
-<div clas="text-center">
-<a href="{{route('VerConvenio')}}"  class="btn btn-primary"> ENVIAR</a>
-</div>
-
+    <div class ="container">
+     <center><input type="submit" name="procesar" class="btn btn-primary" value="Agregar"></center>
+    </div>       
+            
+</form>
 </body>
 @endsection

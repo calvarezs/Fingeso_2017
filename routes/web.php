@@ -84,3 +84,6 @@ Route::get('/HistorialEvaluacionesFacultad','EvaluacionController@historial_facu
 
 
 Route::post('/mostrar','ActividadController@new_actividades')->name('NewActividades');
+
+
+Route::post('/newConvenio','ConvenioController@new_convenio')->name('newConvenio');

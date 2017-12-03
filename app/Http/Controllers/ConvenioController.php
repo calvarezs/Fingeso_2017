@@ -34,6 +34,10 @@ class ConvenioController extends Controller
             return view ('Convenio.Profesor.Create');
     }
 
+
+    public function new_convenio(Request $i){
+            return $i;  
+    }
     public function revisar(){
             return view ('Convenio.Director.Revisar');
     }
