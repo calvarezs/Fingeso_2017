@@ -25,11 +25,13 @@ class ConvenioController extends Controller
 
     public function index()
     {
-        return view('Convenio.Profesor.HomeConvenio');
+        $convenios=ConvenioDesempeno::All();
+        return view('Convenio.Profesor.HomeConvenio',compact('convenios'));
     }
 
     public function index2(){
-        return view('Convenio.Director.HomeConvenio');
+        $convenios=ConvenioDesempeno::All();
+        return view('Convenio.Director.HomeConvenio',compact('convenios'));
     }
 
     public function create(){
@@ -74,7 +76,8 @@ class ConvenioController extends Controller
     }
 
     public function historial2(){
-            return view ('Convenio.Director.Historial');
+        $convenios=ConvenioDesempeno::All();
+        return view ('Convenio.Director.Historial',compact('convenios'));
     }
     public function detalles(Request $i){
         $inputs=Input::all();

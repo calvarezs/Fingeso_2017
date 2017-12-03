@@ -48,7 +48,7 @@ Route::post('CrearActividades','ActividadController@RegistrarNuevaActividad')->n
 
 Route::get('/HistorialActividades','ActividadController@Historial')->name('HistorialActividad');
 
-
+//
 Route::get('/Evaluaciones','EvaluacionController@index')->name('Evaluaciones');
 
 
@@ -59,7 +59,7 @@ Route::get('/EvaluacionesDepartamento','EvaluacionController@ver_departamento')-
 
 
 Route::get('/EvaluacionesFacultad','EvaluacionController@ver_facultad')->name('FacultadEvaluaciones');
-
+//
 Route::get('/Apelaciones','EvaluacionController@apelacion')->name('Apelaciones');
 
 Route::get('/EvaluacionesLista','EvaluacionController@evaluaciones_departamento')->name('Edepartamento');
@@ -72,7 +72,7 @@ Route::get('/AgregarEvaluacionFacultad','EvaluacionController@detalles_evaluacio
 
 Route::get('/FvaluacionesLista','EvaluacionController@Evaluaciones_facultad')->name('Fdepartamento');
 
-Route::get('/Apelaciones','EvaluacionController@ver_apelaciones')->name('VerApelacion');
+Route::get('/VerApelaciones','EvaluacionController@ver_apelaciones')->name('VerApelacion');
 
 Route::get('/ApelacionesDetalles','EvaluacionController@detalles_apelaciones')->name('DetallesApelacion');
 
