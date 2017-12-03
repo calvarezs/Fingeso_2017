@@ -62,7 +62,7 @@
 <div class="container">
     <h3 class="text-center"> COMENTARIOS </h3>
 <div clas="text-center">
-<a href="{{route('Convenio')}}"  class="btn btn-primary"> Agregar comentario</a>
+<a href="#agregar"  data-toggle='modal' class="btn btn-primary"> Agregar comentario</a>
 </div>
       <br>
       <div class="form-group"> 
@@ -85,8 +85,36 @@
 </div>
 <hr />
 
-
-
-
 </body>
+
+
+<div class="modal fade"  id="agregar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ 
+   <div  class="modal-dialog modal-md" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h5 class="" ass="modal-title" id="myModalLabel">Agregar comentario </h5>
+        </div>
+              
+        <div class="modal-body">
+       
+
+               
+
+                {{csrf_field()}}
+            
+                <textarea class="form-control" name="comentarios" id ="comentarios" placeholder="Escribir comentario" rows="10"></textarea>
+                <div class ="container">
+     <center><input type="submit" name="procesar" class="btn btn-primary" value="Agregar"></center>
+    </div> 
+  
+
+          </div>
+       </form>
+      </div>
+      </div>
+     </div>
+</div>
+
 @endsection
