@@ -33,7 +33,6 @@ Route::get('/CrearConvenio', 'ConvenioController@create')->name('CreateConvenio'
 Route::get('/VerConvenio','ConvenioController@ver')->name('VerConvenio');
 
 
-
 Route::get('/RevisarConvenio','ConvenioController@revisar')->name('RevisarConvenio');
 
 
@@ -82,3 +81,6 @@ Route::get('/HistorialApelacion','EvaluacionController@historial_apelaciones')->
 
 
 Route::get('/HistorialEvaluacionesFacultad','EvaluacionController@historial_facultad')->name('HEvaluacionF');
+
+
+Route::post('/mostrar','ActividadController@new_actividades')->name('NewActividades');

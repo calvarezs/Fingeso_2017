@@ -35,6 +35,11 @@ class ActividadController extends Controller
         return view ('Actividad.RegistrarActividad');
     }
 
+    public function new_actividades(Request $i){
+            
+           return $i;
+    }
+
     public function RegistrarNuevaActividad(request $data)
     {
         $actividad = new HistorialActividades();

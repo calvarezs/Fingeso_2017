@@ -27,32 +27,40 @@
       <hr />
   </header>
   <div class="container">
-  <form>
+
     <h3 class="text-center"> Actividad </h3>
+
+<form class="form-horizontal" method="POST" action="{{ route('NewActividades') }}">
+        {{ csrf_field() }}
+  
+        
       <div class="form-group">
         <div class="col-md-12"> 
-          <label for="titulo">Titulo</label>
-          <input class="form-control" id="titulo" type="text">
-
+            <label for="titulo">Titulo</label>
+            <input class="form-control" name ="titulo" id="titulo" type="text">
         </div>
+
         <div class="col-md-12">
           <label for="detalles">Detalles de la actividad </label>
-          <textarea class="form-control" id ="detalles" placeholder="Escribir actividad" rows="10"></textarea>
+          <textarea class="form-control" name="detalles" id ="detalles" placeholder="Escribir actividad" rows="10"></textarea>
         </div>
+    
       </div>
+
+
       <div class="form-group">
         <div class="row">
           <div class="col-md-6 ">
-            <label for="">Tipo de actividad</label>
-            <select class="form-control" name="" id="tipo">
-            <option value="">Investigación</option>
-            <option value="">Vinculación con el medio</option>
-            <option value="">Academica</option>
+            <label for="Tipo">Tipo de actividad</label>
+            <select class="form-control" name="Tipo" id="tipo">
+            <option >Investigación</option>
+            <option >Vinculación con el medio</option>
+            <option >Academica</option>
             </select>
           </div>
           <div class="col-md-6">
             <label for="ubicacion"> Ubicación </label>
-            <input class ="form-control" type="text" name="fname">
+            <input class ="form-control" type="text" name="Ubicacion">
           </div>
         </div>
       </div>
@@ -60,11 +68,13 @@
         <div class="row">
           <div class="col-md-6 ">
             <label for="Fecha"> Fecha </label>
-            <input class="form-control" id="Fecha" type="date">
+            <input class="form-control" id="Fecha" name ="Fecha" type="date">
+
+
           </div>
           <div class="col-md-6">
             <label for="hora"> Hora </label>
-            <input class= "form-control" id="hora" type="time">
+            <input class= "form-control" id="hora" name="hora" type="time">
           </div>
         </div>
       </div>
@@ -78,15 +88,16 @@
               <input type="file" id="documento">
           </div>
 
+
           <div class="form-group">
             <div class="row">
               <div class="col-md-6 ">
                 <label for="documento_fecha">Fecha creación</label>
-                  <input class="form-control" id="documento_fecha" type="date">
+                  <input id="documento_fecha" type="date">
               </div>
               <div class="col-md-6">
                 <label>Autor</label>
-                <input class ="form-control" type="text" name="fname"><br>
+                <input class  type="text"><br>
               </div>
             </div>
           </div>
@@ -103,27 +114,31 @@
             <div class="row">
               <div class="col-md-6 ">
                 <label for="documento_fecha">Fecha creación</label>
-                  <input class="form-control" id="documento_fecha" type="date">
+                  <input  id="documento_fecha" type="date">
               </div>
               <div class="col-md-6">
                 <label>Autor</label>
-                <input class ="form-control" type="text" name="vname"><br>
+                <input  type="text" ><br>
               </div>
             </div>
 
   <hr/>
 
   <div class="form-group">
-  <label for="sel1">Privacidad de la actividad</label>
-  <select class="form-control" id="sel1">
+  <label for="privacidad">Privacidad de la actividad</label>
+  <select class="form-control" name="privacidad" id="privacidad">
+
     <option>Privado</option>
     <option>Publico</option>
   </select>
 </div>
-    <div class="col-md- 12 center-block">
-      <a href="{{route('CrearNuevaActividad')}}"  class="btn btn-primary"> INGRESAR</a>
-    </div>
+    <div class>
+     <center><input type="submit" name="procesar" class="btn btn-primary" value="Agregar"></center>
+       </div>       
+            </form>
+
     <br></br>
+ 
   </div>   
 
 @endsection

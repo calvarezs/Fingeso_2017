@@ -39,7 +39,6 @@
 				<th> Hora</th>
 				<th> Ubicación</th>
 				<th> Privacidad</th>
-				<th> Acciones </th>
 			</thead>
 
 			<tbody>
@@ -52,7 +51,6 @@
                 <td>{{$actividad->Hora}}</td>
                 <td>{{$actividad->ubicacion}}</td>
 				<td>{{$actividad->privacidad}}</td>
-                <td> <button class="btn btn-success btn-xs">Editar</button> </td>
             </tr>
             @endforeach
 			</tbody>
