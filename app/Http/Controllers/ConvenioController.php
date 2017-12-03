@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ConvenioDesempeno;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Input;
 class ConvenioController extends Controller
 {
     /**
@@ -76,7 +77,9 @@ class ConvenioController extends Controller
             return view ('Convenio.Director.Historial');
     }
     public function detalles(Request $i){
-         return $i;
-           //return view ('Convenio.Profesor.detalles');
+        $inputs=Input::all();
+        $idConvenio = $inputs['idConvenio']; 
+        $convenio=ConvenioDesempeno::find($idConvenio);
+        return view ('Convenio.Profesor.detalles', compact('convenio'));
     }
 }
