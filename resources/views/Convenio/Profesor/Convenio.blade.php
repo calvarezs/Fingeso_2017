@@ -21,14 +21,22 @@
 
 <div class="container">
         <h1 class="text-center"> PROPUSTA DE CONVENIO AÑO  <?php echo date("Y"); ?></h1>
+
 </div>
+
 <hr />
 </header>
 
+  <div>
+ 
+  </div>
 <body>
   
 
 <div class="container">
+   <hr />
+   <h2> Status: </h2> <h1> Rechazada</h1>   
+    <hr />
     <h3 class="text-center"> SEMESTRE 1 </h3> 
       <br>
       <div class="form-group"> 

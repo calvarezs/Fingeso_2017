@@ -119,7 +119,7 @@
                         <th> NOMBRE </th>
                         <th> COMENTARIO</th>
                       
-                      </thead>
+                       </thead>
                       <tbody> 
                       <td> 1 </td>
                       <td> 12/13/18</td>
