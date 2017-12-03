@@ -41,7 +41,6 @@ class EvaluacionController extends Controller
         return view('Evaluacion.Departamento.Evaluaciones');
     }
     public function detalles_evaluacion_departamento(){
-        
         return view('Evaluacion.Departamento.agregarEvaluaciones');
     }
     public function detalles_evaluacion_Facultad(){
