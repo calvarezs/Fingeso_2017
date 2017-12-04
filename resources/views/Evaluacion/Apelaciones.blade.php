@@ -36,7 +36,11 @@
                             <td>{{$apelacion->Puntaje_Departamento}}</td>
                             <td>{{$apelacion->Puntaje_Facultad}}</td> 
                             <td>{{$apelacion->Puntaje_Promedio}}</td> 
-                            <td> <a href="{{route('DetallesConvenio')}}"  class="btn btn-primary"> Apelar</a> </td>
+                        <form class="form-horizontal" method="POST" action="{{route('DetallesConvenio')}}">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="idApelacion" value="{{$convenio->id}}">
+                            <button type="submit" class="btn btn-primary">Apelar</button> 
+            </form> </td>
                         </tr>
                         @endforeach
                   </tbody>
