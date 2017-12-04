@@ -21,16 +21,20 @@
       <div class="form-group"> 
                   <table class="table table-bordered table-striped">
                       <thead>
-                        <th> N° </th>
-                        <th> Fecha Evaluacion</th>
-                
+                       <th> N°</th>
+                  <th> Fecha </th>
+        <th> Nota Departamento  </th>
+        <th> Nota Facultad </th>
+        <th> Nota promedio </th>
                         <th> Acciones</th>
                       </thead>
                       <tbody> 
-                      <td> 1 </td>
-                      <td> 14/03/2017</td>
-                      <td> <a href="{{route('DetallesConvenio')}}"  class="btn btn-primary"> Apelar</a>
-                       <a href="{{route('DetallesConvenio')}}"  class="btn btn-primary"> Detalles</a> </td>
+                      <td>  "" </td>
+                      <td> "" </td>
+                      <td >  " " </td>
+                      <td>  " " </td>
+                      <td >  " "</td> 
+                      <td> <a href="{{route('DetallesConvenio')}}"  class="btn btn-primary"> Apelar</a> </td>
 
                   </tbody>
                   </table>
@@ -45,17 +49,24 @@
       <div class="form-group"> 
                   <table class="table table-bordered table-striped">
                       <thead>
-                        <th> N° </th>
-                        <th> Fecha Evaluacion </th>
+                         <th> N°</th>
+                  <th> Fecha </th>
+        <th> Nota Departamento  </th>
+        <th> Nota Facultad </th>
+        <th> Nota promedio </th>
+        <th> Nota Post Apelacion</th>
                         <th> Estado </th>
-
+        
                       
                       </thead>
                       <tbody> 
-                      <td> N° </td>
-                      <td> 17/01/12</td>
-                      <td> En Evaluacion </td>
-        
+                      <td>  "" </td>
+                      <td>  "" </td>
+                      <td>  ""  </td>
+                       <td>  "" </td>
+                      <td>  "" </td>
+                      <td>  ""  </td>
+        <td>  ""  </td>
                   </tbody>
                   </table>
       </div> 
