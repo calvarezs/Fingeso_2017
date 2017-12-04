@@ -30,7 +30,7 @@ class EvaluacionController extends Controller
         if(!(Auth::check() && (Auth::user()->tipo == 2 || Auth::user()->tipo == 3)))
         {
             return redirect()->route('home');
-        }
+        } 
 
         return view('Evaluacion.HomeEvaluaciones');
     }
