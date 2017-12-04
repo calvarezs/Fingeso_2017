@@ -6,7 +6,7 @@
 
  <br>
   <div class="jumbotron" align="center"  >
-    <h1>CONVENIO ACTUAL</h1> 
+    <h1>CONVENIO ACTUAL</h1>  
     <p> <a href="{{ route('VerConvenio') }}" class="btn btn-primary">VER   ACTUAL</a> </p> 
     <p> <a href="{{ route('CreateConvenio') }}"  class="btn btn-primary">CREAR NUEVO</a> </p> 
   </div>

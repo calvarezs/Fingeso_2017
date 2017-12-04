@@ -62,6 +62,11 @@ class ConvenioController extends Controller
     {
         $convenio=ConvenioDesempeno::orderBy('fecha_creacion', 'desc')
         ->first(); 
+
+        if (!count($convenio))
+        {
+            return view ('Convenio.Profesor.Create');
+        } 
         return view ('Convenio.Profesor.convenio',compact('convenio'));
     }
     
