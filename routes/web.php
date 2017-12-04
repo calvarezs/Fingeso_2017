@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/', 'HomeController@enrutador')->name('enrutador');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/Convenio', 'ConvenioController@index')->name('Convenio');
