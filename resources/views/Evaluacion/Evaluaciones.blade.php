@@ -5,7 +5,7 @@
 <div class ="container">
 
 	   <div>
-  			<h1 class="text-center"> Lista de Evaluaciones por Realizar</h1>
+  			<h1 class="text-center"> Lista de Evaluaciones </h1>
 			
   		</div>
   		<hr />
@@ -17,17 +17,24 @@
 		<table class="table table-bordered table-striped">
 			<thead>
 				<th> N°</th>
-				<th> Nombre Academico </th>
-				<td> Acciones </th>
+				<th> Fecha </th>
+				<th> Nota Departamento  </th>
+				<th> Nota Facultad </th>
+				<th> Nota promedio </th>
+				
+
 			</thead>
 
 			<tbody>
 			<tr> 
 
 			
-			<td> 1 </td>
-			<td> Juan carlos </td>
-			<td>  <a href="{{route('ADepartamento')}}"  class="btn btn-primary"> Evaluar</a> </td>
+			<td>" " </td>
+			<td> " "</td>
+			<td>" " </td>
+			<td>  " "</td>
+			<td> " " </td>
+
 			</tr>
 			
 			</tbody>
