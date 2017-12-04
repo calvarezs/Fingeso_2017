@@ -21,6 +21,8 @@ class CreateActaCalificacionsTable extends Migration
             $table->double('Puntaje_Departamento', 2, 1)->nullable();
             $table->double('Puntaje_Facultad', 2, 1)->nullable();
             $table->double('Puntaje_Promedio', 2, 1)->nullable(); 
+            $table->double('Puntaje_Apelacion', 2, 1)->nullable(); 
+            $table->integer('estado')->nullable();
             $table->String('informacion')->nullable(); 
             $table->String('acta')->nullable(); 
 

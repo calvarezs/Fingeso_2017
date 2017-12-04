@@ -27,6 +27,8 @@ class ActaCalificacion extends Model
         'Puntaje_Promedio',
         'informacion',
         'acta',
+        'Puntaje_Apelacion', 
+        'estado',
         'academico_id',
         'comision_facultad_id'
     ];

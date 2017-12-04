@@ -7,6 +7,7 @@ use App\ComisionFacultad;
 use App\ComisionDepartamento;
 use App\Director;
 use App\Academico;
+use App\ActaCalificacion;
 
 class DatabaseSeeder extends Seeder
 {
@@ -40,5 +41,9 @@ class DatabaseSeeder extends Seeder
         HistorialActividades::unguard();
         //$this->call(HistorialActividadesSeeder::class);
         HistorialActividades::reguard();
+
+        ActaCalificacion::unguard();
+        $this->call(CalificacionSeeder::class);
+        ActaCalificacion::reguard();
     }
 }

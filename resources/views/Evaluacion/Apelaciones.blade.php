@@ -22,20 +22,23 @@
                   <table class="table table-bordered table-striped">
                       <thead>
                        <th> N°</th>
-                  <th> Fecha </th>
-        <th> Nota Departamento  </th>
-        <th> Nota Facultad </th>
-        <th> Nota promedio </th>
+                         <th> Fecha </th>
+                        <th> Nota Departamento  </th>
+                        <th> Nota Facultad </th>
+                        <th> Nota promedio </th>
                         <th> Acciones</th>
-                      </thead>
+                      </thead> 
                       <tbody> 
-                      <td>  "" </td>
-                      <td> "" </td>
-                      <td >  " " </td>
-                      <td>  " " </td>
-                      <td >  " "</td> 
-                      <td> <a href="{{route('DetallesConvenio')}}"  class="btn btn-primary"> Apelar</a> </td>
-
+                      @foreach ($apelaciones1 as $apelacion)
+                        <tr>
+                            <td>{{$apelacion->id}}</td> 
+                            <td>{{$apelacion->fecha}}</td> 
+                            <td>{{$apelacion->Puntaje_Departamento}}</td>
+                            <td>{{$apelacion->Puntaje_Facultad}}</td> 
+                            <td>{{$apelacion->Puntaje_Promedio}}</td> 
+                            <td> <a href="{{route('DetallesConvenio')}}"  class="btn btn-primary"> Apelar</a> </td>
+                        </tr>
+                        @endforeach
                   </tbody>
                   </table>
       </div> 
@@ -49,24 +52,41 @@
       <div class="form-group"> 
                   <table class="table table-bordered table-striped">
                       <thead>
-                         <th> N°</th>
-                  <th> Fecha </th>
-        <th> Nota Departamento  </th>
-        <th> Nota Facultad </th>
-        <th> Nota promedio </th>
-        <th> Nota Post Apelacion</th>
+                        <th> N°</th>
+                        <th> Fecha </th>
+                        <th> Nota Departamento  </th>
+                        <th> Nota Facultad </th>
+                        <th> Nota promedio </th>
+                        <th> Nota Post Apelacion</th>
                         <th> Estado </th>
-        
-                      
-                      </thead>
-                      <tbody> 
-                      <td>  "" </td>
-                      <td>  "" </td>
-                      <td>  ""  </td>
-                       <td>  "" </td>
-                      <td>  "" </td>
-                      <td>  ""  </td>
-        <td>  ""  </td>
+                    </thead>
+                    <tbody> 
+                        @foreach ($apelaciones2 as $apelacion)
+                        <tr>
+                            <td>{{$apelacion->id}}</td> 
+                            <td>{{$apelacion->fecha}}</td> 
+                            <td>{{$apelacion->Puntaje_Departamento}}</td>
+                            <td>{{$apelacion->Puntaje_Facultad}}</td> 
+                            <td>{{$apelacion->Puntaje_Promedio}}</td> 
+                            <td>{{$apelacion->Puntaje_Apelacion}}</td>
+                            @switch($apelacion->estado)
+                                @case(0)
+                                    <td>No apelado</td>
+                                    @break
+
+                                @case(1)
+                                    <td>En proceso</td>
+                                    @break
+
+                                @case(2)
+                                    <td>Corregida</td>
+                                    @break
+
+                                @default
+                                    <td>No especificado</td>
+                            @endswitch 
+                        </tr>
+                        @endforeach        
                   </tbody>
                   </table>
       </div> 

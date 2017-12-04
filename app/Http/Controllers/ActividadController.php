@@ -28,7 +28,7 @@ class ActividadController extends Controller
 
     public function Historial()
     {
-        $actividades=HistorialActividades::All(); 
+        $actividades=HistorialActividades::All();//where('id_usuario', '>', 0);//Auth::user()->id
         return view('Actividad.HistorialActividades',compact('actividades'));
     }
 
@@ -47,28 +47,7 @@ class ActividadController extends Controller
         $actividad->fecha = $data->Fecha;
         $actividad->Hora = $data->hora; 
         $actividad->privacidad = $data->privacidad;
-          $actividad->save();
-        return redirect()->route('HistorialActividad');
-    }
-
-    public function RegistrarNuevaActividad(request $data)
-    {
-        $actividad = new HistorialActividades();
-        
-        $actividad->id_usuario = Auth::user()->id;
-        $actividad->titulo = $data->titulo;
-        $actividad->detalles_actividad = $data->detalles;
-        $actividad->tipo_actividad = $data->tipo;
-        $actividad->ubicacion = $data->ubicacion;
-        $actividad->fecha = $data->Fecha;
-        $actividad->Hora = $data->hora; 
-        $actividad->fecha_creacion = $data->documento_fecha;
-        $actividad->autor_documento = $data->fname; 
-        $actividad->fecha_creacion_video = $data->documento_fecha;
-        $actividad->autor_video = $data->vname;
-        $actividad->privacidad = $data->sel1;
-        
         $actividad->save();
         return redirect()->route('HistorialActividad');
-    }
+    } 
 }

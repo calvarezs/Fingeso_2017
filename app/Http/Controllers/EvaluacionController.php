@@ -138,8 +138,11 @@ class EvaluacionController extends Controller
         
         return view('Evaluacion.Departamento.Home');
     }
-    public function apelacion(){
-        return view('Evaluacion.Apelaciones');    
+    public function apelacion()
+    {
+        $apelaciones1 = ActaCalificacion::where('academico_id',Auth::user()->id)->where('estado',0)->get(); 
+        $apelaciones2 = ActaCalificacion::where('academico_id',Auth::user()->id)->where('estado',2)->get();    
+        return view('Evaluacion.Apelaciones',compact('apelaciones1','apelaciones2'));    
     }
 
 }
