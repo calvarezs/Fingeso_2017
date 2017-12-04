@@ -36,7 +36,7 @@ class EvaluacionController extends Controller
     }
     
     public function ver(){
-        if(!(Auth::check() && (Auth::user()->tipo == 2 || Auth::user()->tipo == 3)))
+        if(!(Auth::check() && Auth::user()->tipo == 4))
         {
             return redirect()->route('home');
         }
