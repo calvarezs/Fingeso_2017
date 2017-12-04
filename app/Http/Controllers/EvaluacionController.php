@@ -148,8 +148,7 @@ class EvaluacionController extends Controller
 
     public function cambiar_id(request $i)
     {
-        $inputs=Input::all();
-        $idApelacion = $inputs['id']; 
+        $idApelacion =  $i->idApelacion 
         $Apelacion=ActaCalificacion::find($idApelacion);
 
         $apelaciones1 = ActaCalificacion::where('academico_id',Auth::user()->id)->where('estado',0)->get(); 
