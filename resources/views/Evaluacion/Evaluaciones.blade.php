@@ -21,7 +21,7 @@
 				<th> Nota Departamento  </th>
 				<th> Nota Facultad </th>
 				<th> Nota promedio </th>
-				
+			
 
 			</thead>
 
@@ -33,7 +33,7 @@
 			<td> " "</td>
 			<td>" " </td>
 			<td>  " "</td>
-			<td> " " </td>
+			<td> " " </td>	
 
 			</tr>
 			
