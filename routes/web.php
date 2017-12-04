@@ -43,6 +43,8 @@ Route::get('/HistorialConvenio','ConvenioController@historial')->name('historial
 Route::get('/HistorialConvenioDirector','ConvenioController@historial2')->name('DhistorialConvenio');
 Route::post('/DetallesConvenio','ConvenioController@detalles')->name('DetallesConvenio');
 
+Route::post('/DetallesApelacion','EvaluacionController@cambiar_id')->name('DetallesApelacion');
+
 Route::get('/Actividades','ActividadController@index')->name('Actividades');
 
 Route::get('/CrearActividades','ActividadController@Registrar')->name('CreateActividad');

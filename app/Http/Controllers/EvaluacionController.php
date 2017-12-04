@@ -146,6 +146,16 @@ class EvaluacionController extends Controller
         return view('Evaluacion.Apelaciones',compact('apelaciones1','apelaciones2'));    
     }
 
+    public function cambiar_id(request $i)
+    {
+        $inputs=Input::all();
+        $idApelacion = $inputs['id']; 
+        $Apelacion=ActaCalificacion::find($idApelacion);
+
+        $apelaciones1 = ActaCalificacion::where('academico_id',Auth::user()->id)->where('estado',0)->get(); 
+        $apelaciones2 = ActaCalificacion::where('academico_id',Auth::user()->id)->whereNotIn('estado', [0])->get();    
+        return view('Evaluacion.Apelaciones',compact('apelaciones1','apelaciones2')); 
+    }
 }
 
 
