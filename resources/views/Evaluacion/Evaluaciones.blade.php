@@ -26,18 +26,15 @@
 			</thead>
 
 			<tbody>
-			<tr> 
-
-			
-			<td>" " </td>
-			<td> " "</td>
-			<td>" " </td>
-			<td>  " "</td>
-			<td> " " </td>	
-			
-
+			@foreach ($apelaciones as $apelacion)
+			<tr>
+				<td>{{$apelacion->id}}</td> 
+				<td>{{$apelacion->fecha}}</td> 
+				<td>{{$apelacion->Puntaje_Departamento}}</td>
+				<td>{{$apelacion->Puntaje_Facultad}}</td> 
+				<td>{{$apelacion->Puntaje_Promedio}}</td>  
 			</tr>
-			
+			@endforeach
 			</tbody>
 
 		</table>

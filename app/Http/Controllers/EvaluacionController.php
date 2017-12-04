@@ -41,7 +41,8 @@ class EvaluacionController extends Controller
             return redirect()->route('home');
         }
 
-        return view('Evaluacion.Evaluaciones');    
+        $apelaciones = ActaCalificacion::where('academico_id',Auth::user()->id)->where('estado',0)->get();   
+        return view('Evaluacion.Evaluaciones',compact('apelaciones'));    
     }
 
     Public function ver_facultad(){
@@ -141,7 +142,7 @@ class EvaluacionController extends Controller
     public function apelacion()
     {
         $apelaciones1 = ActaCalificacion::where('academico_id',Auth::user()->id)->where('estado',0)->get(); 
-        $apelaciones2 = ActaCalificacion::where('academico_id',Auth::user()->id)->where('estado',2)->get();    
+        $apelaciones2 = ActaCalificacion::where('academico_id',Auth::user()->id)->whereNotIn('estado', [0])->get();    
         return view('Evaluacion.Apelaciones',compact('apelaciones1','apelaciones2'));    
     }
 
