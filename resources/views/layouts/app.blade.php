@@ -52,7 +52,7 @@
                         @elseif(Auth::user()->tipo == 2)
                             <li><a href="{{ route('DepartamentoEvaluaciones')}}">Evaluaciones</a></li>
                         @elseif(Auth::user()->tipo == 3)
-                            <li><a href="{{ route('Convenio2')}}">Convenios</a></li>
+                            <li><a href="{{ route('FacultadEvaluaciones')}}">Evaluaciones</a></li> 
                         @elseif(Auth::user()->tipo == 4)
                             <li><a href="{{ route('Actividades') }}">Actividades</a></li>
                             <li><a href="{{ route('Convenio') }}">Convenios</a></li>

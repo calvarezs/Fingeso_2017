@@ -19,8 +19,13 @@ class ActaCalificacion extends Model
      * @var array
      */
     protected $fillable = [
-        'calificacion',
-        'informacion'.
+        'nombre',
+        'fecha',
+        'Departamento',
+        'Puntaje_Departamento',
+        'Puntaje_Facultad',
+        'Puntaje_Promedio',
+        'informacion',
         'acta',
         'academico_id',
         'comision_facultad_id'

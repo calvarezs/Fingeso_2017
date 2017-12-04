@@ -19,8 +19,10 @@ class ActaPrecalificacion extends Model
      * @var array
      */
     protected $fillable = [
-        'calificacion',
-        'informacion'.
+        'calificacion', 
+        'nombre',
+        'fecha', 
+        'informacion',
         'acta',
         'academico_id',
         'comision_facultad_id',

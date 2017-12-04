@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\HistorialActividades;
+use Auth;
 
 class ActividadController extends Controller
 {
@@ -37,10 +38,8 @@ class ActividadController extends Controller
     }
 
     public function new_actividades(Request $data){
-        $d;   
-          
         $actividad = new HistorialActividades();
-        $actividad->id_usuario = 1;
+        $actividad->id_usuario = Auth::user()->id;
         $actividad->titulo = $data->titulo;
         $actividad->detalles_actividad = $data->detalles;
         $actividad->tipo_actividad = $data->Tipo;
@@ -56,7 +55,7 @@ class ActividadController extends Controller
     {
         $actividad = new HistorialActividades();
         
-        $actividad->id_usuario = 1;
+        $actividad->id_usuario = Auth::user()->id;
         $actividad->titulo = $data->titulo;
         $actividad->detalles_actividad = $data->detalles;
         $actividad->tipo_actividad = $data->tipo;

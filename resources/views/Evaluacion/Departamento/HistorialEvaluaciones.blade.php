@@ -4,22 +4,6 @@
 
 <div class ="container">
 
-
-
-	<div class="collapse navbar-collapse" id="app-navbar-collapse" style="background-color: #f08b24;">
-     <div class="navbar-header">
-    
-        <a class="navbar-brand" href="#">Logotipo</a>
-     </div>
-     <div>  <ul class="nav navbar-nav" style="background-color: #ffff;">
-                        &nbsp;
-              </ul>
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{ route('DepartamentoEvaluaciones')}}">Evaluaciones</a></li>               
-                    </ul></div>
-
-</div>
 	   <div>
   			<h1 class="text-center"> Lista de Evaluaciones Realizadas</h1>
 			
@@ -39,14 +23,16 @@
 			</thead>
 
 			<tbody>
-			<tr> 
-
-			<td> 1 </td>
-			<td> Juan carlos </td>
-			<td>   3,5</td>
-			<td> 15/12/12</td>
-
+			
+			@foreach ($evaluaciones as $evaluacion)
+            <tr>
+                <td>{{$evaluacion->id}}</td> 
+                <td>{{$evaluacion->nombre}}</td> 
+				<td>{{$evaluacion->calificacion}}</td>
+				<td>{{$evaluacion->fecha}}</td>
 			</tr>
+			@endforeach
+
 			</tbody>
 
 		</table>
